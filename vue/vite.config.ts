@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "../src/templates/vue",
-    assetsDir: "../../static/vue",
+    outDir: "./dist",
+    assetsDir: "./static",
   },
 });
