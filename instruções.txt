@@ -1,0 +1,25 @@
+//
+// Python (back-end / api)
+//
+
+// Instalar Python 3.10
+
+// Instalar pipenv para gerenciamento de pacotes
+pip install pipenv
+
+// Instaurar um venv
+pipenv shell
+
+// Gerar o lockfile
+pipenv lock
+
+// Instalar dependências no venv
+pipenv sync
+
+//
+// Vuejs (front-end / client)
+//
+
+// Fazendo o build do frontend
+- Certifique-se que seu cwd esteja na pasta 'vue'
+npm run build
