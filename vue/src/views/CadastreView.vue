@@ -2,10 +2,13 @@
 import { useApi } from "@/services/api";
 import { ref } from "vue";
 import type { Entidade } from "@/services/api";
+import { useRouter } from "vue-router";
 
 const api = useApi();
+const router = useRouter();
 
 const entidade = ref<Entidade>({
+  email: "",
   nome: "",
   cnpj: "",
   rua: "",
@@ -17,6 +20,7 @@ const entidade = ref<Entidade>({
 
 const onSubmit = async () => {
   await api.entidades.createEntidade(entidade.value);
+  router.push("cadastro-concluido");
 };
 </script>
 
@@ -32,6 +36,17 @@ const onSubmit = async () => {
   <div class="col-md-4 offset-md-3">
     <form method="POST" @submit.prevent="onSubmit">
       <h4>Dados</h4>
+
+      <div class="form-group">
+        <label for="emailInput">Nome</label>
+        <input
+          v-model="entidade.email"
+          type="text"
+          class="form-control"
+          id="emailInput"
+          placeholder="E-mail da Entidade"
+        />
+      </div>
 
       <div class="form-group">
         <label for="nomeInput">Nome</label>

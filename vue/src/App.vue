@@ -6,12 +6,12 @@ import { RouterView } from "vue-router";
   <main>
     <div class="container py-4">
       <header class="pb-3 mb-4 border-bottom">
-        <a
-          href="/"
+        <router-link
+          to="/"
           class="d-flex align-items-center text-dark text-decoration-none"
         >
           <span class="fs-2">PRODEA</span>
-        </a>
+        </router-link>
       </header>
       <RouterView />
     </div>

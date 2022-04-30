@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import CadastreView from "../views/CadastreView.vue";
+import CadastroConcluidoView from "../views/CadastroConcluidoView.vue";
 import ProdeaView from "../views/ProdeaView.vue";
 import EntidadesView from "../views/EntidadesView.vue";
 
@@ -16,6 +17,11 @@ const router = createRouter({
       path: "/cadastre",
       name: "cadastre",
       component: CadastreView,
+    },
+    {
+      path: "/cadastro-concuido",
+      name: "cadastro-concuido",
+      component: CadastroConcluidoView,
     },
     {
       path: "/prodea",
