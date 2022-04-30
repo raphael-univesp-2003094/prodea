@@ -30,6 +30,7 @@ def create_app() -> Flask:
     # Inicializa o gerenciador de banco de dados (SQLAlchemy).
     db.app = app
     db.init_app(app)
+    db.create_all()
     Migrate(app, db)
 
     # Registra os Blueprints das rotas da aplicação.
