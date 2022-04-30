@@ -22,7 +22,7 @@ fs.cpSync(
   path.resolve(distSrc, "index.html"),
   path.resolve(templatesSrc, "index.html")
 );
-copyDirSync(path.resolve(distSrc, "static"), staticSrc);
+copyDirSync(path.resolve(distSrc, "static", "vue"), staticSrc);
 
 function copyDirSync(src, dest) {
   let entries = fs.readdirSync(src, { withFileTypes: true });
